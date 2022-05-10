@@ -28,7 +28,7 @@ jobs:
           key: ${{secrets.SSH_KEY}} # Private or Public key of the server
           username: ${{secrets.SSH_USERNAME}} # User of server you want to ssh into
           
-          script:
+          script: |
             cd /var/www/test.juggyprojects.com/
             mkdir deploy
             echo 'Deployment Successful To Digital Ocean'
