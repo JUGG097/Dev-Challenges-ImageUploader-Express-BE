@@ -30,6 +30,11 @@ jobs:
           
           script: |
             cd /var/www/test.juggyprojects.com/
-            mkdir deploy
+            rm -r Dev-Challenges-ImageUploader-Express-BE
+            git clone git@github.com:JUGG097/Dev-Challenges-ImageUploader-Express-BE.git
+            cd Dev-Challenges-ImageUploader-Express-BE
+            cp /var/www/test.juggyprojects.com/.env /var/www/test.juggyprojects.com/Dev-Challenges-ImageUploader-Express-BE/.env
+            npm install
+            pm2 start www
             echo 'Deployment Successful To Digital Ocean'
       
