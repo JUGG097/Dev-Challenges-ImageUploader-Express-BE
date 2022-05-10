@@ -35,6 +35,6 @@ jobs:
             cd Dev-Challenges-ImageUploader-Express-BE
             cp /var/www/test.juggyprojects.com/.env /var/www/test.juggyprojects.com/Dev-Challenges-ImageUploader-Express-BE/.env
             npm install
-            pm2 start www
+            pm2 start bin/www
             echo 'Deployment Successful To Digital Ocean'
       
